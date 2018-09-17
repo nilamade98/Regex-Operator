@@ -1,0 +1,21 @@
+digraph finite_state_operator {
+	rankdir=Q;
+	size="8,5"
+	node [shape = doublecircle]; S Q10;
+	node [shape = circle];
+	S-> Q1 [ label = "variabel" ];
+	Q1-> Q2 [ label = "=" ];
+        Q2-> Q3 [ label = "variabel/value" ];
+        Q2-> Q7 [ label = "(" ];
+        Q3-> Q4 [ label = "Operator (+, -, /, *)" ];
+        Q3-> Q6 [ label = ")" ];
+        Q3-> Q10 [ label = "; (semicolon)" ];
+        Q4-> Q5 [ label = "(" ];
+        Q4-> Q3 [ label = "variabel/value" ];
+        Q5-> Q3 [ label = "variabel/value" ];
+        Q6-> Q10 [ label = "; (semicolon)" ];
+        Q7-> Q8 [ label = "tipe data" ];
+        Q8-> Q9 [ label = ")" ];
+        Q9-> Q4 [ label = "sqrt" ];
+
+}
